@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
 }
 .about-bg{
@@ -52,7 +52,7 @@
     line-height: 2.375rem;
     padding: 0 1.5rem;    
 }
-.about-span-hero, .about-span{
+.about-hero-h1 > span, .about-hero-need-h2 > span{
     color: #7874F4;
 }
 .about-span{
@@ -71,7 +71,7 @@
 }
 .about-hero-p{
     margin: 0 auto;
-    max-width: 35rem;
+    max-width: 39rem;
     text-align: center;    
     font-size: 1rem;
     color: #868685;
@@ -93,7 +93,6 @@
 .about-hero-need-h2{
     margin: 5.5rem 0 1rem;
     font-size: 2rem;
-    display: -webkit-box;
 }
 .about-need-p{
     color: #3C3C3B;
@@ -115,6 +114,10 @@
     color: #7874F4;
     font-size: .875rem;
     text-transform: uppercase;
+}
+.about-button-container{
+    display: flex;
+    align-items: center; 
 }
 .about-button-contact{
     font-size: .875rem;
@@ -172,7 +175,7 @@
     }
     .about-hero-need-h2{
         font-size: 2.8em;
-        max-width: 30rem;
+        max-width: 35rem;
     }
     .about-need-p{
         font-size: 1.6rem;
@@ -191,7 +194,7 @@
         max-width: 25rem;
     }
     .about-hero-btn{
-        margin-top: 3.5rem;
+        margin: 3.5rem auto 0;
     }
     .about-bg{
         top: 2rem;
@@ -230,7 +233,7 @@
     .about-hero-need-h2{
         font-size: 3.44rem;
         line-height: 3.75rem;
-        max-width: 34rem;
+        max-width: 40rem;
     }
     .about-need-p{
         font-size: 1.88rem;

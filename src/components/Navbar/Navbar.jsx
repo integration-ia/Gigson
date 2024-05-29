@@ -1,18 +1,22 @@
 import { useState } from 'react';
 import logoImg from '../../assets/Logo.svg';
 import { Link, NavLink } from 'react-router-dom';
+import LanguageSelector from '../LanguageSelector/LanguageSelector.jsx'
+import { useTranslation } from 'react-i18next';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const {t} = useTranslation()
 
+  const {about, services, cases, faqs, contact} = t("menu")
+  
   const menuLinks = [
-    {name: 'ABOUT ',  link:'about'},
-    {name: 'SERVICES',  link:'services'},
-    {name: 'CASES',     link:'cases'},
-    {name: 'FAQs',      link:'faqs'},
-    {name: 'CONTACT US',   link:'contact'},
-    {name: 'EN / ES',   link:'/error'}
+    {name: about,     link:'about'},
+    {name: services,  link:'services'},
+    {name: cases,     link:'cases'},
+    {name: faqs,      link:'faqs'},
+    {name: contact,   link:'contact'},
   ]
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -42,17 +46,16 @@ const Navbar = () => {
                 alt="Logo Gigson Solutions"
               />
             </Link>
-            {menuLinks.map(({name,link}, index) =>  
+            {menuLinks.map(({name, link}, index) => 
               <li key={index}>
-                <NavLink 
-                  className="menu-item" 
-                  to={link} 
-                  onClick={closeMobileMenu}
-                >
-                  {name}
-                </NavLink>
+                  <NavLink 
+                    className="menu-item" 
+                    to={link} 
+                    onClick={closeMobileMenu}
+                  >{name}</NavLink>
               </li>
-            )}            
+            )}
+            <LanguageSelector closeMobileMenu={closeMobileMenu}/>
           </ul>
         </nav>
       </div>
