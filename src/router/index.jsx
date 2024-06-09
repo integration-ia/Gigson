@@ -1,18 +1,18 @@
-import AboutHero from "../components/About/AboutHero"
-import Cases from "../components/Pages/Cases/Cases"
-import { createBrowserRouter } from "react-router-dom"
-import Contact from "../components/Pages/Contact"
-import Faqs from "../components/Pages/Faqs"
-import Home from "../components/Home/Home"
-import Layout from "../components/Layout/Layout"
-import Services from "../components/Services/Services"
-import '../App.css'
-import NotFound from "../components/Pages/NotFound"
+import Layout from "../components/Layout/Layout";
+import Home from "../components/Home/Home";
+import AboutHero from "../components/About/AboutHero";
+import Services from "../components/Services/Services";
+import Cases from "../components/Pages/Cases/Cases";
+import Faqs from "../components/Pages/Faqs/Faqs";
+import Contact from "../components/Pages/Contact";
+import NotFound from "../components/Pages/NotFound";
+import { createBrowserRouter } from "react-router-dom";
+import '../App.css';
 
 export const router = createBrowserRouter([
    {
     path: '/',
-    element: <Layout />,
+    element: <Layout />,  // Aquí ya se utiliza Layout
     errorElement: <NotFound />,
     children: [
         {
