@@ -93,7 +93,7 @@
 }
 
 .cases-why-gigson{
-    margin: 0 1rem 7rem;
+    margin: 5rem 1rem 5rem;
     padding: 3rem 1rem;
     background-color: #E3E1EE;
     color: #3C3C3B;
@@ -120,11 +120,7 @@
 
 /* inicio de cases css */
 
-.home-case-flex{
-    margin: 0 4.5rem 0;
-    display: flex;
 
-}
 
 .home-hero-cases{
     
@@ -169,6 +165,7 @@
 .home-cases-filters-title{
     font-size: 1.25em;
     margin-bottom: 2rem;
+    margin-left: 2rem;
 }
 .home-cases-container-filters{
     max-width: 45rem;
@@ -177,6 +174,8 @@
     justify-content: flex-start;
     gap: .7rem .5rem;
     margin: 1.5rem auto;
+    margin-left: 2rem;
+    margin-right: .5rem;
 }
 .cases-reset-filters{
     margin: 2rem auto;
